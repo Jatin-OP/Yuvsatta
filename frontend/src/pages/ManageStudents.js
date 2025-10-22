@@ -464,7 +464,9 @@ const blankForm = {
   contact_no: "",
   address: "",
 };
-
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || "https://yuvsatta-2.onrender.com",
+});
 export default function ManageStudents() {
   const [students, setStudents] = useState([]);
   const [filterClass, setFilterClass] = useState("");
